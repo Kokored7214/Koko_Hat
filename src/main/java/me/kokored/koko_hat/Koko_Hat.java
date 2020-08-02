@@ -6,6 +6,7 @@ public final class Koko_Hat extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println("Koko_JoinMotd has enabled");
 
         new Hat();
 
@@ -13,5 +14,6 @@ public final class Koko_Hat extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        System.out.println("Koko_JoinMotd has disabled");
     }
 }
