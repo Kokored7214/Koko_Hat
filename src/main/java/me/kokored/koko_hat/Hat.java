@@ -1,16 +1,20 @@
 package me.kokored.koko_hat;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 
 public class Hat implements CommandExecutor {
+
+    Plugin plugin = Koko_Hat.getPlugin(Koko_Hat.class);
+
     public Hat() {
         Bukkit.getPluginCommand("hat").setExecutor(this);
     }
@@ -25,13 +29,13 @@ public class Hat implements CommandExecutor {
                 ItemStack hat = inv.getHelmet();
 
                 if (hand.getType() == Material.AIR) {
-                    player.sendMessage("You have nothing on hand...");
+                    player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("nothing on hand"));
 
                     return true;
 
                 }
                 if (hand.getAmount() != 1) {
-                    player.sendMessage(ChatColor.GRAY + "You have more than one item in your hand");
+                    player.sendMessage(ChatColor.YELLOW + plugin.getConfig().getString("more than one item"));
 
                     return true;
 
@@ -40,17 +44,18 @@ public class Hat implements CommandExecutor {
                     inv.setHelmet(hand);
                     inv.setItemInMainHand(hat);
                     player.updateInventory();
-                    player.sendMessage(ChatColor.GREEN + "hat is now on!");
+                    player.sendMessage(ChatColor.GREEN + plugin.getConfig().getString("hat on"));
+
 
                 }
 
             }else {
                 Player player = (Player) sender;
-                player.sendMessage(org.bukkit.ChatColor.RED + "You do not have permission to do that command");
+                player.sendMessage(ChatColor.RED + plugin.getConfig().getString("no permission"));
 
             }
         }else {
-            sender.sendMessage("This command can only be executed by the player");
+            sender.sendMessage(plugin.getConfig().getString("only player"));
 
         }
         return true;

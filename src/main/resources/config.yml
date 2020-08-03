@@ -1,0 +1,43 @@
+#######################################
+#                                     #
+#              Koko_Hat               #
+#         Author:Koko_red7214         #
+#                                     #
+#######################################
+
+#Message
+
+#English
+nothing on hand: You have nothing on hand...
+more than one item: You have more than one item in your hand
+hat on: Hat is now on
+no permission: You do not have permission to do that command
+only player: This command can only be executed by the player
+
+#中文繁體
+#nothing on hand: 你手上沒有東西...
+#more than one item: 你手上的物品多餘一個 無法穿戴
+#hat on: 帽子戴好咯
+#no permission: 你沒有權限來執行這個指令
+#only player: 該指令只能由玩家執行
+
+#中文简体
+#nothing on hand: 你手上没有东西...
+#more than one item: 你手上物品多余一个 无法穿戴
+#hat on: 帽子戴好咯
+#no permission: 你没有权限来执行这个指令
+#only player: 该指令只能由玩家执行
+
+#日本語
+#nothing on hand: 手元に何もありません...
+#more than one item: あなたの手には複数のアイテムがあり、それを着ることはできません
+#hat on: 帽子がついています
+#no permission: このコマンドを実行する権限がありません
+#only player: このコマンドはプレイヤーのみが実行できます
+
+#Custom language
+#nothing on hand:
+#more than one item:
+#hat on:
+#no permission:
+#only player:
