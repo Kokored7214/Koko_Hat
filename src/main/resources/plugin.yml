@@ -1,7 +1,7 @@
 name: Koko_Hat
 version: ${project.version}
 main: me.kokored.koko_hat.Koko_Hat
-api-version: 1.16
+api-version: 1.15
 authors: [Koko_red7214]
 commands:
   hat:
